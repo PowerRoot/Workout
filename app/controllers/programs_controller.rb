@@ -1,6 +1,7 @@
 class ProgramsController < ApplicationController
   before_action :find_program, only: [:show, :edit, :update, :destroy]
   def index
+    @programs = Program.all.order("created_at DESC")
   end
 
   def show
