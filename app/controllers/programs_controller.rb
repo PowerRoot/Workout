@@ -1,4 +1,5 @@
 class ProgramsController < ApplicationController
+  before_action :find_program, only: [:show, :edit, :update, :destroy]
   def index
   end
 
@@ -34,5 +35,6 @@ class ProgramsController < ApplicationController
   end
 
   def find_program
+    @program = Program.find(params[:id])
   end
 end
