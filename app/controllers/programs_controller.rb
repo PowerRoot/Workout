@@ -7,7 +7,7 @@ class ProgramsController < ApplicationController
   def show
   end
 
-  def new
+  def new                                     
   	@program = Program.new
   end
 
@@ -21,12 +21,20 @@ class ProgramsController < ApplicationController
   end
 
   def edit
-  end
+
+  end       
 
   def update
+    if @program.update(program_params)
+      redirect_to @program
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @program.destroy
+    redirect_to root_path
   end
 
   private

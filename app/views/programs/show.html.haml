@@ -3,3 +3,9 @@
 	%p= @program.workout
 	%p= @program.mood
 	%p= @program.length
+
+= link_to "Back", root_path 
+|
+= link_to "Edit", edit_program_path(@program)
+|
+= link_to "Delete", program_path(@program), method: :delete, data: { confirm: "Esti sigur ca vrei sa stergi acest program?" }
