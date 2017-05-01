@@ -1,0 +1,19 @@
+!!!
+%html
+%head
+	%title Program Log Application
+	= csrf_meta_tags
+	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+	= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+%body
+	%nav.navbar.navbar-default
+		.container
+			.navbar-header
+			= link_to "Program Log", root_path, class: "navbar-brand"
+			.nav.navbar-nav.navbar-right
+			= link_to "Program Nou", new_program_path, class: "navbar navbar-link"
+
+	.container
+		= yield
+		
+		
