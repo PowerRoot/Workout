@@ -4,6 +4,13 @@
 	%p= @program.mood
 	%p= @program.length
 
+#exercises
+	%h2 Exercises
+	= render @program.exercises
+
+	%h3 Add an exercise
+	= render "exercises/form"
+
 = link_to "Back", root_path 
 |
 = link_to "Edit", edit_program_path(@program)

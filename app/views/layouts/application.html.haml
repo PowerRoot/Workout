@@ -6,12 +6,12 @@
 	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
 	= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 %body
-	%nav.navbar.navbar-default
+	%nav.navbar.navbar-inverse
 		.container
 			.navbar-header
-			= link_to "Program Log", root_path, class: "navbar-brand"
+			= link_to "Program Log", root_path, class: "navbar-brand", class: "culoare"
 			.nav.navbar-nav.navbar-right
-			= link_to "Program Nou", new_program_path, class: "navbar navbar-link"
+			= link_to "Program Nou", new_program_path, class: "navbar navbar-link", class: "culoare"
 
 	.container
 		= yield
