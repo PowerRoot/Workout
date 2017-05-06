@@ -1,4 +1,5 @@
-- @programs.each do |program|
-	%h2= link_to program.data.strftime("%A %B %d"), program
-	%h3= program.workout
+#index_programs
+	- @programs.each do |program|
+		%h2= link_to program.data.strftime("%A %B %d"), program
+		%h3= program.workout
 	
